@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtblShohinIchiran" targetNamespace="http://tempuri.org/dtblShohinIchiran.xsd" xmlns:mstns="http://tempuri.org/dtblShohinIchiran.xsd" xmlns="http://tempuri.org/dtblShohinIchiran.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtblShohinIchiran" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtblShohinIchiran" msprop:Generator_UserDSName="dtblShohinIchiran">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtblShohinIchiran" msprop:Generator_TableClassName="dtblShohinIchiranDataTable" msprop:Generator_TableVarName="tabledtblShohinIchiran" msprop:Generator_TablePropName="_dtblShohinIchiran" msprop:Generator_RowDeletingName="dtblShohinIchiranRowDeleting" msprop:Generator_RowChangingName="dtblShohinIchiranRowChanging" msprop:Generator_RowEvHandlerName="dtblShohinIchiranRowChangeEventHandler" msprop:Generator_RowDeletedName="dtblShohinIchiranRowDeleted" msprop:Generator_UserTableName="dtblShohinIchiran" msprop:Generator_RowChangedName="dtblShohinIchiranRowChanged" msprop:Generator_RowEvArgName="dtblShohinIchiranRowChangeEvent" msprop:Generator_RowClassName="dtblShohinIchiranRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="daibunruiCd" msprop:Generator_ColumnVarNameInTable="columndaibunruiCd" msprop:Generator_ColumnPropNameInRow="daibunruiCd" msprop:Generator_ColumnPropNameInTable="daibunruiCdColumn" msprop:Generator_UserColumnName="daibunruiCd" type="xs:string" minOccurs="0" />
+              <xs:element name="daibunruiNm" msprop:Generator_ColumnVarNameInTable="columndaibunruiNm" msprop:Generator_ColumnPropNameInRow="daibunruiNm" msprop:Generator_ColumnPropNameInTable="daibunruiNmColumn" msprop:Generator_UserColumnName="daibunruiNm" type="xs:string" minOccurs="0" />
+              <xs:element name="shohinCd" msprop:Generator_ColumnVarNameInTable="columnshohinCd" msprop:Generator_ColumnPropNameInRow="shohinCd" msprop:Generator_ColumnPropNameInTable="shohinCdColumn" msprop:Generator_UserColumnName="shohinCd" type="xs:string" minOccurs="0" />
+              <xs:element name="shohinNm" msprop:Generator_ColumnVarNameInTable="columnshohinNm" msprop:Generator_ColumnPropNameInRow="shohinNm" msprop:Generator_ColumnPropNameInTable="shohinNmColumn" msprop:Generator_UserColumnName="shohinNm" type="xs:string" minOccurs="0" />
+              <xs:element name="taniNm" msprop:Generator_ColumnVarNameInTable="columntaniNm" msprop:Generator_ColumnPropNameInRow="taniNm" msprop:Generator_ColumnPropNameInTable="taniNmColumn" msprop:Generator_UserColumnName="taniNm" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtblTokuisakibetuUriageShukeihyo" targetNamespace="http://tempuri.org/dtblTokuisakibetuUriageShukeihyo.xsd" xmlns:mstns="http://tempuri.org/dtblTokuisakibetuUriageShukeihyo.xsd" xmlns="http://tempuri.org/dtblTokuisakibetuUriageShukeihyo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtblTokuisakibetuUriageShukeihyo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtblTokuisakibetuUriageShukeihyo" msprop:Generator_UserDSName="dtblTokuisakibetuUriageShukeihyo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtblTokuisakibetuUriageShukeihyo" msprop:Generator_TableClassName="dtblTokuisakibetuUriageShukeihyoDataTable" msprop:Generator_TableVarName="tabledtblTokuisakibetuUriageShukeihyo" msprop:Generator_TablePropName="_dtblTokuisakibetuUriageShukeihyo" msprop:Generator_RowDeletingName="dtblTokuisakibetuUriageShukeihyoRowDeleting" msprop:Generator_RowChangingName="dtblTokuisakibetuUriageShukeihyoRowChanging" msprop:Generator_RowEvHandlerName="dtblTokuisakibetuUriageShukeihyoRowChangeEventHandler" msprop:Generator_RowDeletedName="dtblTokuisakibetuUriageShukeihyoRowDeleted" msprop:Generator_UserTableName="dtblTokuisakibetuUriageShukeihyo" msprop:Generator_RowChangedName="dtblTokuisakibetuUriageShukeihyoRowChanged" msprop:Generator_RowEvArgName="dtblTokuisakibetuUriageShukeihyoRowChangeEvent" msprop:Generator_RowClassName="dtblTokuisakibetuUriageShukeihyoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="kikan" msprop:Generator_ColumnVarNameInTable="columnkikan" msprop:Generator_ColumnPropNameInRow="kikan" msprop:Generator_ColumnPropNameInTable="kikanColumn" msprop:Generator_UserColumnName="kikan" type="xs:string" minOccurs="0" />
+              <xs:element name="kikanSnen" msprop:Generator_ColumnVarNameInTable="columnkikanSnen" msprop:Generator_ColumnPropNameInRow="kikanSnen" msprop:Generator_ColumnPropNameInTable="kikanSnenColumn" msprop:Generator_UserColumnName="kikanSnen" type="xs:string" minOccurs="0" />
+              <xs:element name="kikanStuki" msprop:Generator_ColumnVarNameInTable="columnkikanStuki" msprop:Generator_ColumnPropNameInRow="kikanStuki" msprop:Generator_ColumnPropNameInTable="kikanStukiColumn" msprop:Generator_UserColumnName="kikanStuki" type="xs:string" minOccurs="0" />
+              <xs:element name="kikanShi" msprop:Generator_ColumnVarNameInTable="columnkikanShi" msprop:Generator_ColumnPropNameInRow="kikanShi" msprop:Generator_ColumnPropNameInTable="kikanShiColumn" msprop:Generator_UserColumnName="kikanShi" type="xs:string" minOccurs="0" />
+              <xs:element name="kikanEnen" msprop:Generator_ColumnVarNameInTable="columnkikanEnen" msprop:Generator_ColumnPropNameInRow="kikanEnen" msprop:Generator_ColumnPropNameInTable="kikanEnenColumn" msprop:Generator_UserColumnName="kikanEnen" type="xs:string" minOccurs="0" />
+              <xs:element name="kikanEtuki" msprop:Generator_ColumnVarNameInTable="columnkikanEtuki" msprop:Generator_ColumnPropNameInRow="kikanEtuki" msprop:Generator_ColumnPropNameInTable="kikanEtukiColumn" msprop:Generator_UserColumnName="kikanEtuki" type="xs:string" minOccurs="0" />
+              <xs:element name="kikanEhi" msprop:Generator_ColumnVarNameInTable="columnkikanEhi" msprop:Generator_ColumnPropNameInRow="kikanEhi" msprop:Generator_ColumnPropNameInTable="kikanEhiColumn" msprop:Generator_UserColumnName="kikanEhi" type="xs:string" minOccurs="0" />
+              <xs:element name="tokuisakiCd" msprop:Generator_ColumnVarNameInTable="columntokuisakiCd" msprop:Generator_ColumnPropNameInRow="tokuisakiCd" msprop:Generator_ColumnPropNameInTable="tokuisakiCdColumn" msprop:Generator_UserColumnName="tokuisakiCd" type="xs:string" minOccurs="0" />
+              <xs:element name="jigyoCd" msprop:Generator_ColumnVarNameInTable="columnjigyoCd" msprop:Generator_ColumnPropNameInRow="jigyoCd" msprop:Generator_ColumnPropNameInTable="jigyoCdColumn" msprop:Generator_UserColumnName="jigyoCd" type="xs:string" minOccurs="0" />
+              <xs:element name="tokuisakiNm" msprop:Generator_ColumnVarNameInTable="columntokuisakiNm" msprop:Generator_ColumnPropNameInRow="tokuisakiNm" msprop:Generator_ColumnPropNameInTable="tokuisakiNmColumn" msprop:Generator_UserColumnName="tokuisakiNm" type="xs:string" minOccurs="0" />
+              <xs:element name="jigyoNm" msprop:Generator_ColumnVarNameInTable="columnjigyoNm" msprop:Generator_ColumnPropNameInRow="jigyoNm" msprop:Generator_ColumnPropNameInTable="jigyoNmColumn" msprop:Generator_UserColumnName="jigyoNm" type="xs:string" minOccurs="0" />
+              <xs:element name="uriage" msprop:Generator_ColumnVarNameInTable="columnuriage" msprop:Generator_ColumnPropNameInRow="uriage" msprop:Generator_ColumnPropNameInTable="uriageColumn" msprop:Generator_UserColumnName="uriage" type="xs:string" minOccurs="0" />
+              <xs:element name="shohiZei" msprop:Generator_ColumnVarNameInTable="columnshohiZei" msprop:Generator_ColumnPropNameInRow="shohiZei" msprop:Generator_ColumnPropNameInTable="shohiZeiColumn" msprop:Generator_UserColumnName="shohiZei" type="xs:string" minOccurs="0" />
+              <xs:element name="zeikomiG" msprop:Generator_ColumnVarNameInTable="columnzeikomiG" msprop:Generator_ColumnPropNameInRow="zeikomiG" msprop:Generator_ColumnPropNameInTable="zeikomiGColumn" msprop:Generator_UserColumnName="zeikomiG" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtblTokuisakibetuUriageShukeihyoF" msprop:Generator_TableClassName="dtblTokuisakibetuUriageShukeihyoFDataTable" msprop:Generator_TableVarName="tabledtblTokuisakibetuUriageShukeihyoF" msprop:Generator_RowChangedName="dtblTokuisakibetuUriageShukeihyoFRowChanged" msprop:Generator_TablePropName="dtblTokuisakibetuUriageShukeihyoF" msprop:Generator_RowDeletingName="dtblTokuisakibetuUriageShukeihyoFRowDeleting" msprop:Generator_RowChangingName="dtblTokuisakibetuUriageShukeihyoFRowChanging" msprop:Generator_RowEvHandlerName="dtblTokuisakibetuUriageShukeihyoFRowChangeEventHandler" msprop:Generator_RowDeletedName="dtblTokuisakibetuUriageShukeihyoFRowDeleted" msprop:Generator_RowClassName="dtblTokuisakibetuUriageShukeihyoFRow" msprop:Generator_UserTableName="dtblTokuisakibetuUriageShukeihyoF" msprop:Generator_RowEvArgName="dtblTokuisakibetuUriageShukeihyoFRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="uriageGokei" msprop:Generator_ColumnVarNameInTable="columnuriageGokei" msprop:Generator_ColumnPropNameInRow="uriageGokei" msprop:Generator_ColumnPropNameInTable="uriageGokeiColumn" msprop:Generator_UserColumnName="uriageGokei" type="xs:string" minOccurs="0" />
+              <xs:element name="shohizeiGokei" msprop:Generator_ColumnVarNameInTable="columnshohizeiGokei" msprop:Generator_ColumnPropNameInRow="shohizeiGokei" msprop:Generator_ColumnPropNameInTable="shohizeiGokeiColumn" msprop:Generator_UserColumnName="shohizeiGokei" type="xs:string" minOccurs="0" />
+              <xs:element name="zeikomiGokei" msprop:Generator_ColumnVarNameInTable="columnzeikomiGokei" msprop:Generator_ColumnPropNameInRow="zeikomiGokei" msprop:Generator_ColumnPropNameInTable="zeikomiGokeiColumn" msprop:Generator_UserColumnName="zeikomiGokei" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtblTokuiM" targetNamespace="http://tempuri.org/dtblTokuiM.xsd" xmlns:mstns="http://tempuri.org/dtblTokuiM.xsd" xmlns="http://tempuri.org/dtblTokuiM.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtblTokuiM" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtblTokuiM" msprop:Generator_UserDSName="dtblTokuiM">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtblTokuiM" msprop:Generator_TableClassName="dtblTokuiMDataTable" msprop:Generator_TableVarName="tabledtblTokuiM" msprop:Generator_RowChangedName="dtblTokuiMRowChanged" msprop:Generator_TablePropName="_dtblTokuiM" msprop:Generator_RowDeletingName="dtblTokuiMRowDeleting" msprop:Generator_RowChangingName="dtblTokuiMRowChanging" msprop:Generator_RowEvHandlerName="dtblTokuiMRowChangeEventHandler" msprop:Generator_RowDeletedName="dtblTokuiMRowDeleted" msprop:Generator_RowClassName="dtblTokuiMRow" msprop:Generator_UserTableName="dtblTokuiM" msprop:Generator_RowEvArgName="dtblTokuiMRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="kenCd" msprop:Generator_ColumnVarNameInTable="columnkenCd" msprop:Generator_ColumnPropNameInRow="kenCd" msprop:Generator_ColumnPropNameInTable="kenCdColumn" msprop:Generator_UserColumnName="kenCd" type="xs:string" minOccurs="0" />
+              <xs:element name="kenMei" msprop:Generator_ColumnVarNameInTable="columnkenMei" msprop:Generator_ColumnPropNameInRow="kenMei" msprop:Generator_ColumnPropNameInTable="kenMeiColumn" msprop:Generator_UserColumnName="kenMei" type="xs:string" minOccurs="0" />
+              <xs:element name="tokuisakiCd" msprop:Generator_ColumnVarNameInTable="columntokuisakiCd" msprop:Generator_ColumnPropNameInRow="tokuisakiCd" msprop:Generator_ColumnPropNameInTable="tokuisakiCdColumn" msprop:Generator_UserColumnName="tokuisakiCd" type="xs:string" minOccurs="0" />
+              <xs:element name="tokuisakiNmJ" msprop:Generator_ColumnVarNameInTable="columntokuisakiNmJ" msprop:Generator_ColumnPropNameInRow="tokuisakiNmJ" msprop:Generator_ColumnPropNameInTable="tokuisakiNmJColumn" msprop:Generator_UserColumnName="tokuisakiNmJ" type="xs:string" minOccurs="0" />
+              <xs:element name="tokuisakiNmk" msprop:Generator_ColumnVarNameInTable="columntokuisakiNmk" msprop:Generator_ColumnPropNameInRow="tokuisakiNmk" msprop:Generator_ColumnPropNameInTable="tokuisakiNmkColumn" msprop:Generator_UserColumnName="tokuisakiNmk" type="xs:string" minOccurs="0" />
+              <xs:element name="jigyouCd" msprop:Generator_ColumnVarNameInTable="columnjigyouCd" msprop:Generator_ColumnPropNameInRow="jigyouCd" msprop:Generator_ColumnPropNameInTable="jigyouCdColumn" msprop:Generator_UserColumnName="jigyouCd" type="xs:string" minOccurs="0" />
+              <xs:element name="jigyouNm" msprop:Generator_ColumnVarNameInTable="columnjigyouNm" msprop:Generator_ColumnPropNameInRow="jigyouNm" msprop:Generator_ColumnPropNameInTable="jigyouNmColumn" msprop:Generator_UserColumnName="jigyouNm" type="xs:string" minOccurs="0" />
+              <xs:element name="yubin" msprop:Generator_ColumnVarNameInTable="columnyubin" msprop:Generator_ColumnPropNameInRow="yubin" msprop:Generator_ColumnPropNameInTable="yubinColumn" msprop:Generator_UserColumnName="yubin" type="xs:string" minOccurs="0" />
+              <xs:element name="jyusho1" msprop:Generator_ColumnVarNameInTable="columnjyusho1" msprop:Generator_ColumnPropNameInRow="jyusho1" msprop:Generator_ColumnPropNameInTable="jyusho1Column" msprop:Generator_UserColumnName="jyusho1" type="xs:string" minOccurs="0" />
+              <xs:element name="jyusho2" msprop:Generator_ColumnVarNameInTable="columnjyusho2" msprop:Generator_ColumnPropNameInRow="jyusho2" msprop:Generator_ColumnPropNameInTable="jyusho2Column" msprop:Generator_UserColumnName="jyusho2" type="xs:string" minOccurs="0" />
+              <xs:element name="renraku1" msprop:Generator_ColumnVarNameInTable="columnrenraku1" msprop:Generator_ColumnPropNameInRow="renraku1" msprop:Generator_ColumnPropNameInTable="renraku1Column" msprop:Generator_UserColumnName="renraku1" type="xs:string" minOccurs="0" />
+              <xs:element name="renraku2" msprop:Generator_ColumnVarNameInTable="columnrenraku2" msprop:Generator_ColumnPropNameInRow="renraku2" msprop:Generator_ColumnPropNameInTable="renraku2Column" msprop:Generator_UserColumnName="renraku2" type="xs:string" minOccurs="0" />
+              <xs:element name="sime" msprop:Generator_ColumnVarNameInTable="columnsime" msprop:Generator_ColumnPropNameInRow="sime" msprop:Generator_ColumnPropNameInTable="simeColumn" msprop:Generator_UserColumnName="sime" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

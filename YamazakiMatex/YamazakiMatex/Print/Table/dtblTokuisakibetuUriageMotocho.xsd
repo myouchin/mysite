@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtblTokuisakibetuUriageMotocho" targetNamespace="http://tempuri.org/dtblTokuisakibetuUriageMotocho.xsd" xmlns:mstns="http://tempuri.org/dtblTokuisakibetuUriageMotocho.xsd" xmlns="http://tempuri.org/dtblTokuisakibetuUriageMotocho.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtblTokuisakibetuUriageMotocho" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtblTokuisakibetuUriageMotocho" msprop:Generator_UserDSName="dtblTokuisakibetuUriageMotocho">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtblTokuisakibetuUriageMotocho" msprop:Generator_TableClassName="dtblTokuisakibetuUriageMotochoDataTable" msprop:Generator_TableVarName="tabledtblTokuisakibetuUriageMotocho" msprop:Generator_RowChangedName="dtblTokuisakibetuUriageMotochoRowChanged" msprop:Generator_TablePropName="_dtblTokuisakibetuUriageMotocho" msprop:Generator_RowDeletingName="dtblTokuisakibetuUriageMotochoRowDeleting" msprop:Generator_RowChangingName="dtblTokuisakibetuUriageMotochoRowChanging" msprop:Generator_RowEvHandlerName="dtblTokuisakibetuUriageMotochoRowChangeEventHandler" msprop:Generator_RowDeletedName="dtblTokuisakibetuUriageMotochoRowDeleted" msprop:Generator_RowClassName="dtblTokuisakibetuUriageMotochoRow" msprop:Generator_UserTableName="dtblTokuisakibetuUriageMotocho" msprop:Generator_RowEvArgName="dtblTokuisakibetuUriageMotochoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nen" msprop:Generator_ColumnVarNameInTable="columnnen" msprop:Generator_ColumnPropNameInRow="nen" msprop:Generator_ColumnPropNameInTable="nenColumn" msprop:Generator_UserColumnName="nen" type="xs:string" minOccurs="0" />
+              <xs:element name="tuki" msprop:Generator_ColumnVarNameInTable="columntuki" msprop:Generator_ColumnPropNameInRow="tuki" msprop:Generator_ColumnPropNameInTable="tukiColumn" msprop:Generator_UserColumnName="tuki" type="xs:string" minOccurs="0" />
+              <xs:element name="simebi" msprop:Generator_ColumnVarNameInTable="columnsimebi" msprop:Generator_ColumnPropNameInRow="simebi" msprop:Generator_ColumnPropNameInTable="simebiColumn" msprop:Generator_UserColumnName="simebi" type="xs:string" minOccurs="0" />
+              <xs:element name="tokuisakiCd" msprop:Generator_ColumnVarNameInTable="columntokuisakiCd" msprop:Generator_ColumnPropNameInRow="tokuisakiCd" msprop:Generator_ColumnPropNameInTable="tokuisakiCdColumn" msprop:Generator_UserColumnName="tokuisakiCd" type="xs:string" minOccurs="0" />
+              <xs:element name="tokuisakiNm" msprop:Generator_ColumnVarNameInTable="columntokuisakiNm" msprop:Generator_ColumnPropNameInRow="tokuisakiNm" msprop:Generator_ColumnPropNameInTable="tokuisakiNmColumn" msprop:Generator_UserColumnName="tokuisakiNm" type="xs:string" minOccurs="0" />
+              <xs:element name="uriageTuki" msprop:Generator_ColumnVarNameInTable="columnuriageTuki" msprop:Generator_ColumnPropNameInRow="uriageTuki" msprop:Generator_ColumnPropNameInTable="uriageTukiColumn" msprop:Generator_UserColumnName="uriageTuki" type="xs:string" minOccurs="0" />
+              <xs:element name="uriageBi" msprop:Generator_ColumnVarNameInTable="columnuriageBi" msprop:Generator_ColumnPropNameInRow="uriageBi" msprop:Generator_ColumnPropNameInTable="uriageBiColumn" msprop:Generator_UserColumnName="uriageBi" type="xs:string" minOccurs="0" />
+              <xs:element name="hinmei1" msprop:Generator_ColumnVarNameInTable="columnhinmei1" msprop:Generator_ColumnPropNameInRow="hinmei1" msprop:Generator_ColumnPropNameInTable="hinmei1Column" msprop:Generator_UserColumnName="hinmei1" type="xs:string" minOccurs="0" />
+              <xs:element name="hinmei2" msprop:Generator_ColumnVarNameInTable="columnhinmei2" msprop:Generator_ColumnPropNameInRow="hinmei2" msprop:Generator_ColumnPropNameInTable="hinmei2Column" msprop:Generator_UserColumnName="hinmei2" type="xs:string" minOccurs="0" />
+              <xs:element name="suryo" msprop:Generator_ColumnVarNameInTable="columnsuryo" msprop:Generator_ColumnPropNameInRow="suryo" msprop:Generator_ColumnPropNameInTable="suryoColumn" msprop:Generator_UserColumnName="suryo" type="xs:string" minOccurs="0" />
+              <xs:element name="tani" msprop:Generator_ColumnVarNameInTable="columntani" msprop:Generator_ColumnPropNameInRow="tani" msprop:Generator_ColumnPropNameInTable="taniColumn" msprop:Generator_UserColumnName="tani" type="xs:string" minOccurs="0" />
+              <xs:element name="tanka" msprop:Generator_ColumnVarNameInTable="columntanka" msprop:Generator_ColumnPropNameInRow="tanka" msprop:Generator_ColumnPropNameInTable="tankaColumn" msprop:Generator_UserColumnName="tanka" type="xs:string" minOccurs="0" />
+              <xs:element name="zeinuUriage" msprop:Generator_ColumnVarNameInTable="columnzeinuUriage" msprop:Generator_ColumnPropNameInRow="zeinuUriage" msprop:Generator_ColumnPropNameInTable="zeinuUriageColumn" msprop:Generator_UserColumnName="zeinuUriage" type="xs:string" minOccurs="0" />
+              <xs:element name="nyukin" msprop:Generator_ColumnVarNameInTable="columnnyukin" msprop:Generator_ColumnPropNameInRow="nyukin" msprop:Generator_ColumnPropNameInTable="nyukinColumn" msprop:Generator_UserColumnName="nyukin" type="xs:string" minOccurs="0" />
+              <xs:element name="sashihikiZandaka" msprop:Generator_ColumnVarNameInTable="columnsashihikiZandaka" msprop:Generator_ColumnPropNameInRow="sashihikiZandaka" msprop:Generator_ColumnPropNameInTable="sashihikiZandakaColumn" msprop:Generator_UserColumnName="sashihikiZandaka" type="xs:string" minOccurs="0" />
+              <xs:element name="page" msprop:Generator_ColumnVarNameInTable="columnpage" msprop:Generator_ColumnPropNameInRow="page" msprop:Generator_ColumnPropNameInTable="pageColumn" msprop:Generator_UserColumnName="page" type="xs:short" minOccurs="0" />
+              <xs:element name="maxPage" msprop:Generator_ColumnVarNameInTable="columnmaxPage" msprop:Generator_ColumnPropNameInRow="maxPage" msprop:Generator_ColumnPropNameInTable="maxPageColumn" msprop:Generator_UserColumnName="maxPage" type="xs:short" minOccurs="0" />
+              <xs:element name="group" msprop:Generator_ColumnVarNameInTable="columngroup" msprop:Generator_ColumnPropNameInRow="group" msprop:Generator_ColumnPropNameInTable="groupColumn" msprop:Generator_UserColumnName="group" type="xs:short" minOccurs="0" />
+              <xs:element name="uriageMD" msprop:Generator_ColumnVarNameInTable="columnuriageMD" msprop:Generator_ColumnPropNameInRow="uriageMD" msprop:Generator_ColumnPropNameInTable="uriageMDColumn" msprop:Generator_UserColumnName="uriageMD" type="xs:string" minOccurs="0" />
+              <xs:element name="jigyousyoName" msprop:Generator_ColumnVarNameInTable="columnjigyousyoName" msprop:Generator_ColumnPropNameInRow="jigyousyoName" msprop:Generator_ColumnPropNameInTable="jigyousyoNameColumn" msprop:Generator_UserColumnName="jigyousyoName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

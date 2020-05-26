@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtblShireM" targetNamespace="http://tempuri.org/dtblShireM.xsd" xmlns:mstns="http://tempuri.org/dtblShireM.xsd" xmlns="http://tempuri.org/dtblShireM.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtblShireM" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtblShireM" msprop:Generator_UserDSName="dtblShireM">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtblShireM" msprop:Generator_TableClassName="dtblShireMDataTable" msprop:Generator_TableVarName="tabledtblShireM" msprop:Generator_TablePropName="_dtblShireM" msprop:Generator_RowDeletingName="dtblShireMRowDeleting" msprop:Generator_RowChangingName="dtblShireMRowChanging" msprop:Generator_RowEvHandlerName="dtblShireMRowChangeEventHandler" msprop:Generator_RowDeletedName="dtblShireMRowDeleted" msprop:Generator_UserTableName="dtblShireM" msprop:Generator_RowChangedName="dtblShireMRowChanged" msprop:Generator_RowEvArgName="dtblShireMRowChangeEvent" msprop:Generator_RowClassName="dtblShireMRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="shireCd" msprop:Generator_ColumnVarNameInTable="columnshireCd" msprop:Generator_ColumnPropNameInRow="shireCd" msprop:Generator_ColumnPropNameInTable="shireCdColumn" msprop:Generator_UserColumnName="shireCd" type="xs:string" minOccurs="0" />
+              <xs:element name="shireNm" msprop:Generator_ColumnVarNameInTable="columnshireNm" msprop:Generator_ColumnPropNameInRow="shireNm" msprop:Generator_ColumnPropNameInTable="shireNmColumn" msprop:Generator_UserColumnName="shireNm" type="xs:string" minOccurs="0" />
+              <xs:element name="yubin" msprop:Generator_ColumnVarNameInTable="columnyubin" msprop:Generator_ColumnPropNameInRow="yubin" msprop:Generator_ColumnPropNameInTable="yubinColumn" msprop:Generator_UserColumnName="yubin" type="xs:string" minOccurs="0" />
+              <xs:element name="jyusho1" msprop:Generator_ColumnVarNameInTable="columnjyusho1" msprop:Generator_ColumnPropNameInRow="jyusho1" msprop:Generator_ColumnPropNameInTable="jyusho1Column" msprop:Generator_UserColumnName="jyusho1" type="xs:string" minOccurs="0" />
+              <xs:element name="jyusho2" msprop:Generator_ColumnVarNameInTable="columnjyusho2" msprop:Generator_ColumnPropNameInRow="jyusho2" msprop:Generator_ColumnPropNameInTable="jyusho2Column" msprop:Generator_UserColumnName="jyusho2" type="xs:string" minOccurs="0" />
+              <xs:element name="tel" msprop:Generator_ColumnVarNameInTable="columntel" msprop:Generator_ColumnPropNameInRow="tel" msprop:Generator_ColumnPropNameInTable="telColumn" msprop:Generator_UserColumnName="tel" type="xs:string" minOccurs="0" />
+              <xs:element name="fax" msprop:Generator_ColumnVarNameInTable="columnfax" msprop:Generator_ColumnPropNameInRow="fax" msprop:Generator_ColumnPropNameInTable="faxColumn" msprop:Generator_UserColumnName="fax" type="xs:string" minOccurs="0" />
+              <xs:element name="shime" msprop:Generator_ColumnVarNameInTable="columnshime" msprop:Generator_ColumnPropNameInRow="shime" msprop:Generator_ColumnPropNameInTable="shimeColumn" msprop:Generator_UserColumnName="shime" type="xs:string" minOccurs="0" />
+              <xs:element name="site" msprop:Generator_ColumnVarNameInTable="columnsite" msprop:Generator_ColumnPropNameInRow="site" msprop:Generator_ColumnPropNameInTable="siteColumn" msprop:Generator_UserColumnName="site" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

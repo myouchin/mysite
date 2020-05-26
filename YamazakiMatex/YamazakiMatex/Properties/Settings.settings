@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="YamazakiMatex.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="connstr" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">userid=admin; password=admin; database=testnestdb;Host=192.168.1.4</Value>
+    </Setting>
+    <Setting Name="connstr2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">userid=admin; password=admin; database=testnestdb;Host=127.0.0.1</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

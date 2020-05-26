@@ -1,0 +1,2178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{767C8A31-B3DF-42CD-9DB9-D2CFE66023E3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>YamazakiMatex</RootNamespace>
+    <AssemblyName>YamazakiMatex</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.16.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.16\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.10.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.10.8\lib\net452\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="00_Common\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="00_Common\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="00_Common\ChildBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="00_Common\ChildBaseForm.Designer.cs">
+      <DependentUpon>ChildBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="00_Common\CommonLogic.cs" />
+    <Compile Include="00_Common\CustomDataGridViewComboBoxEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="00_Common\CustomDataGridViewComboBoxEditingControl.Designer.cs">
+      <DependentUpon>CustomDataGridViewComboBoxEditingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="00_Common\CustomDataGridViewTextBoxEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="00_Common\CustomDataGridViewTextBoxEditingControl.Designer.cs">
+      <DependentUpon>CustomDataGridViewTextBoxEditingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="00_Common\CustomDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="00_Common\CustomDataGridView.Designer.cs">
+      <DependentUpon>CustomDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="00_Common\CustomDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="00_Common\CustomDateTimePicker.Designer.cs">
+      <DependentUpon>CustomDateTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="00_Common\CustomComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="00_Common\CustomComboBox.Designer.cs">
+      <DependentUpon>CustomComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="00_Common\CustomTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="00_Common\CustomTextBox.Designer.cs">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="00_Common\frmPrintQueryNouhinsyo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="00_Common\frmPrintQueryNouhinsyo.Designer.cs">
+      <DependentUpon>frmPrintQueryNouhinsyo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="00_Common\frmPrintQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="00_Common\frmPrintQuery.Designer.cs">
+      <DependentUpon>frmPrintQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="00_Common\frmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="00_Common\frmMessage.Designer.cs">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01_DB\DBFileLayout.cs" />
+    <Compile Include="01_DB\DBKaisyaMaster.cs" />
+    <Compile Include="01_DB\DBNyukin.cs" />
+    <Compile Include="01_DB\DBShiharaiShime.cs" />
+    <Compile Include="01_DB\DBShiharai.cs" />
+    <Compile Include="01_DB\DBSeikyu.cs" />
+    <Compile Include="01_DB\DBShire.cs" />
+    <Compile Include="01_DB\DBTantousyaMaster.cs" />
+    <Compile Include="01_DB\DBMeisyoMaster.cs" />
+    <Compile Include="01_DB\DBShouhinMaster.cs" />
+    <Compile Include="01_DB\DBKanriMaster.cs" />
+    <Compile Include="01_DB\DBShiresakiMaster.cs" />
+    <Compile Include="01_DB\DBKenmeiMaster.cs" />
+    <Compile Include="01_DB\DBNouhinsyo.cs" />
+    <Compile Include="01_DB\DBTokuisakiMaster.cs" />
+    <Compile Include="02_SubForm\sfrmUriageIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmUriageIchiran.Designer.cs">
+      <DependentUpon>sfrmUriageIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmHachuSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmHachuSearch.Designer.cs">
+      <DependentUpon>sfrmHachuSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmShiharaiSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmShiharaiSearch.Designer.cs">
+      <DependentUpon>sfrmShiharaiSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmNyukinSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmNyukinSearch.Designer.cs">
+      <DependentUpon>sfrmNyukinSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmShireSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmShireSearch.Designer.cs">
+      <DependentUpon>sfrmShireSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmNouhinsyoSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmNouhinsyoSearch.Designer.cs">
+      <DependentUpon>sfrmNouhinsyoSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmJuchuSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmJuchuSearch.Designer.cs">
+      <DependentUpon>sfrmJuchuSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmMitumoriSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmMitumoriSearch.Designer.cs">
+      <DependentUpon>sfrmMitumoriSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmKenmeiSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmKenmeiSearch.Designer.cs">
+      <DependentUpon>sfrmKenmeiSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmShouhinSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmShouhinSearch.Designer.cs">
+      <DependentUpon>sfrmShouhinSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03_Menu\frmJuchuTop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Menu\frmJuchuTop.Designer.cs">
+      <DependentUpon>frmJuchuTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03_Menu\frmKihonMid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Menu\frmKihonMid.Designer.cs">
+      <DependentUpon>frmKihonMid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03_Menu\frmKihonTop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Menu\frmKihonTop.Designer.cs">
+      <DependentUpon>frmKihonTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03_Menu\frmMitumoriTop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Menu\frmMitumoriTop.Designer.cs">
+      <DependentUpon>frmMitumoriTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03_Menu\frmSyoribiChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Menu\frmSyoribiChange.Designer.cs">
+      <DependentUpon>frmSyoribiChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03_Menu\frmShiireNichijiMid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Menu\frmShiireNichijiMid.Designer.cs">
+      <DependentUpon>frmShiireNichijiMid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03_Menu\frmShiireGetsujiMid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Menu\frmShiireGetsujiMid.Designer.cs">
+      <DependentUpon>frmShiireGetsujiMid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03_Menu\frmShiireNenjiMid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Menu\frmShiireNenjiMid.Designer.cs">
+      <DependentUpon>frmShiireNenjiMid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03_Menu\frmUriageZuijiMid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Menu\frmUriageZuijiMid.Designer.cs">
+      <DependentUpon>frmUriageZuijiMid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03_Menu\frmUriageShiireTop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Menu\frmUriageShiireTop.Designer.cs">
+      <DependentUpon>frmUriageShiireTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03_Menu\frmUriageNenjiMid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Menu\frmUriageNenjiMid.Designer.cs">
+      <DependentUpon>frmUriageNenjiMid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03_Menu\frmUriageNichijiBtm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Menu\frmUriageNichijiBtm.Designer.cs">
+      <DependentUpon>frmUriageNichijiBtm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03_Menu\frmUriageGetsujiMid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Menu\frmUriageGetsujiMid.Designer.cs">
+      <DependentUpon>frmUriageGetsujiMid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03_Menu\frmShiireShimebiMid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Menu\frmShiireShimebiMid.Designer.cs">
+      <DependentUpon>frmShiireShimebiMid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03_Menu\frmUriageShimebiMid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Menu\frmUriageShimebiMid.Designer.cs">
+      <DependentUpon>frmUriageShimebiMid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03_Menu\frmUriageNichijiMid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Menu\frmUriageNichijiMid.Designer.cs">
+      <DependentUpon>frmUriageNichijiMid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03_Menu\frmBusinessMenuBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Menu\frmBusinessMenuBase.Designer.cs">
+      <DependentUpon>frmBusinessMenuBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03_Menu\frmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Menu\frmMainMenu.Designer.cs">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04_Mitumori\frmSelectSyaban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04_Mitumori\frmSelectSyaban.Designer.cs">
+      <DependentUpon>frmSelectSyaban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="05_Juchu\frmBikouInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="05_Juchu\frmBikouInput.Designer.cs">
+      <DependentUpon>frmBikouInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="05_Juchu\frmSearchDiplaySelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="05_Juchu\frmSearchDiplaySelect.Designer.cs">
+      <DependentUpon>frmSearchDiplaySelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmNouhinsyoInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmNouhinsyoInput.Designer.cs">
+      <DependentUpon>frmNouhinsyoInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmSearchDiplaySelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmSearchDiplaySelect.Designer.cs">
+      <DependentUpon>frmSearchDiplaySelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="11_UrikakeIchiran\frmUrikakeIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="11_UrikakeIchiran\frmUrikakeIchiran.Designer.cs">
+      <DependentUpon>frmUrikakeIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmBupinHachusyo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmBupinHachusyo.Designer.cs">
+      <DependentUpon>frmBupinHachusyo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmNouhinShireZanIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmNouhinShireZanIchiran.Designer.cs">
+      <DependentUpon>frmNouhinShireZanIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmKenbetsuHibetsuUriageSyukei.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmKenbetsuHibetsuUriageSyukei.Designer.cs">
+      <DependentUpon>frmKenbetsuHibetsuUriageSyukei.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmKaikakeZandataIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmKaikakeZandataIchiran.Designer.cs">
+      <DependentUpon>frmKaikakeZandataIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmKenmeiIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmKenmeiIchiran.Designer.cs">
+      <DependentUpon>frmKenmeiIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmJuchuKanrenIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmJuchuKanrenIchiran.Designer.cs">
+      <DependentUpon>frmJuchuKanrenIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmAtena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmAtena.designer.cs">
+      <DependentUpon>frmAtena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmShiresakiIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmShiresakiIchiran.Designer.cs">
+      <DependentUpon>frmShiresakiIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmShouhinMIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmShouhinMIchiran.Designer.cs">
+      <DependentUpon>frmShouhinMIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmTokuiMIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmTokuiMIchiran.Designer.cs">
+      <DependentUpon>frmTokuiMIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmNyukinIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmNyukinIchiran.Designer.cs">
+      <DependentUpon>frmNyukinIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmRyoShuSho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmRyoShuSho.designer.cs">
+      <DependentUpon>frmRyoShuSho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmOkurijou.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmOkurijou.designer.cs">
+      <DependentUpon>frmOkurijou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmKetubanIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmKetubanIchiran.Designer.cs">
+      <DependentUpon>frmKetubanIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmTokuisakiUrikakeIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmTokuisakiUrikakeIchiran.Designer.cs">
+      <DependentUpon>frmTokuisakiUrikakeIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmShiharaiYotei.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmShiharaiYotei.Designer.cs">
+      <DependentUpon>frmShiharaiYotei.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmShireMototyo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmShireMototyo.Designer.cs">
+      <DependentUpon>frmShireMototyo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmUriageSyushiIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmUriageSyushiIchiran.Designer.cs">
+      <DependentUpon>frmUriageSyushiIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmTokuisakiUrikakeMototyo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmTokuisakiUrikakeMototyo.Designer.cs">
+      <DependentUpon>frmTokuisakiUrikakeMototyo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmUrikakeKaisyuHyo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmUrikakeKaisyuHyo.Designer.cs">
+      <DependentUpon>frmUrikakeKaisyuHyo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmSeikyusyo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmSeikyusyo.Designer.cs">
+      <DependentUpon>frmSeikyusyo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmTokuisakiUriageSyukei.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmTokuisakiUriageSyukei.Designer.cs">
+      <DependentUpon>frmTokuisakiUriageSyukei.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmJyuchachuIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmJyuchachuIchiran.Designer.cs">
+      <DependentUpon>frmJyuchachuIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmSeikyuIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmSeikyuIchiran.Designer.cs">
+      <DependentUpon>frmSeikyuIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmTokuisakiKikanSyuukei.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmTokuisakiKikanSyuukei.Designer.cs">
+      <DependentUpon>frmTokuisakiKikanSyuukei.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmMitumoriIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_PrintInstructions\frmMitumoriIchiran.Designer.cs">
+      <DependentUpon>frmMitumoriIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="13_SeikyuKoshin\frmSeikyuChangeSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="13_SeikyuKoshin\frmSeikyuChangeSearch.Designer.cs">
+      <DependentUpon>frmSeikyuChangeSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="13_SeikyuKoshin\frmSeikyuChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="13_SeikyuKoshin\frmSeikyuChange.Designer.cs">
+      <DependentUpon>frmSeikyuChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="13_SeikyuKoshin\frmSeikyuShimebiKoshin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="13_SeikyuKoshin\frmSeikyuShimebiKoshin.Designer.cs">
+      <DependentUpon>frmSeikyuShimebiKoshin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="13_SeikyuKoshin\frmSeikyuKoshinTop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="13_SeikyuKoshin\frmSeikyuKoshinTop.Designer.cs">
+      <DependentUpon>frmSeikyuKoshinTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="14_ShiharaiKoushin\frmShiharaiShimebiKoshin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="14_ShiharaiKoushin\frmShiharaiShimebiKoshin.Designer.cs">
+      <DependentUpon>frmShiharaiShimebiKoshin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="18_TokuisakiUrikakeKanri\frmTokuisakiUrikakeKanri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="18_TokuisakiUrikakeKanri\frmTokuisakiUrikakeKanri.Designer.cs">
+      <DependentUpon>frmTokuisakiUrikakeKanri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="15_TokuisakiSeikyuKanri\frmTokuisakiSeikyuKanri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="15_TokuisakiSeikyuKanri\frmTokuisakiSeikyuKanri.Designer.cs">
+      <DependentUpon>frmTokuisakiSeikyuKanri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="16_Nakakita\frmNakakitaJigyousyobetuUriage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="16_Nakakita\frmNakakitaJigyousyobetuUriage.Designer.cs">
+      <DependentUpon>frmNakakitaJigyousyobetuUriage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="16_Nakakita\frmNakakitaTantousyabetuUriage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="16_Nakakita\frmNakakitaTantousyabetuUriage.Designer.cs">
+      <DependentUpon>frmNakakitaTantousyabetuUriage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="16_Nakakita\frmNakakitaKenbetuUriage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="16_Nakakita\frmNakakitaKenbetuUriage.Designer.cs">
+      <DependentUpon>frmNakakitaKenbetuUriage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="17_UriageHibetuSoukatu\frmUriageHibetuSoukatu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="17_UriageHibetuSoukatu\frmUriageHibetuSoukatu.Designer.cs">
+      <DependentUpon>frmUriageHibetuSoukatu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="19_UriageIchiran\frmUriageIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="19_UriageIchiran\frmUriageIchiran.Designer.cs">
+      <DependentUpon>frmUriageIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="88_Master\frmKenmeiM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="88_Master\frmKenmeiM.Designer.cs">
+      <DependentUpon>frmKenmeiM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Report\rptAtena3Gou.cs">
+      <DependentUpon>rptAtena3Gou.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\Report\rptAtena2Gou.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAtena2Gou.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptBuppinKounyusho.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptBuppinKounyusho.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptHachushoAllMeisai.cs">
+      <DependentUpon>rptHachushoAllMeisai.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\Report\rptHachusho.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptHachusho.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptNouhinShireZanIchiran.cs">
+      <DependentUpon>rptNouhinShireZanIchiran.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\Report\rptKaikakeZandakaIchiranNen.cs">
+      <DependentUpon>rptKaikakeZandakaIchiranNen.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\Report\rptKaikakeZandakaIchiranTuki.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptKaikakeZandakaIchiranTuki.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptKenbetuUriageNikkeihyo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptKenbetuUriageNikkeihyo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptKenmeiIchiran.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptKenmeiIchiran.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptJuchuKanrenIchiran.cs">
+      <DependentUpon>rptJuchuKanrenIchiran.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\Report\rptKetubanSeikyusyo.cs">
+      <DependentUpon>rptKetubanSeikyusyo.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\Report\rptKetubanNouhinsyo.cs">
+      <DependentUpon>rptKetubanNouhinsyo.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\Report\rptMitumoriIchiran.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMitumoriIchiran.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptMitumoriIchiran_.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMitumoriIchiran_.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptMitumorisho.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMitumorisho.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptNohinshoAsami.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptNohinshoAsami.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptNohinshoKandenko.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptNohinshoKandenko.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptNohinshoNegurosu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptNohinshoNegurosu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptNohinshoYudensha.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptNohinshoYudensha.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptNouhinshoTohokudenki.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptNouhinshoTohokudenki.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptNouhinsyo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptNouhinsyo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptRyosyusyo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRyosyusyo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptSagawa.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSagawa.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptSeikyuIchiran.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSeikyuIchiran.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptSeikyusyo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSeikyusyo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptShiharaiYotei.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptShiharaiYotei.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptShireIchiran.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptShireIchiran.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptShohinIchiran.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptShohinIchiran.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptKetubanJuchu.cs">
+      <DependentUpon>rptKetubanJuchu.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\Report\rptSireMotocho.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSireMotocho.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptTokuimIchiran.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTokuimIchiran.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptTokuisakibetuHibetuNyukinIchiran.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTokuisakibetuHibetuNyukinIchiran.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptTokuisakibetuUriageShukeihyo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTokuisakibetuUriageShukeihyo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptTokuisakibetuUrikakeIchiran.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTokuisakibetuUrikakeIchiran.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptTokuisakiMaster.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTokuisakiMaster.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptTokuisakiUriageMotocyo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTokuisakiUriageMotocyo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptUriagesyusiichiran.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptUriagesyusiichiran.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptUrikakekinKaishuhyo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptUrikakekinKaishuhyo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Report\rptYamato.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptYamato.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Table\dtblAtena.cs">
+      <DependentUpon>dtblAtena.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblAtena.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblAtena.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblBuppin.cs">
+      <DependentUpon>dtblBuppin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblBuppin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblBuppin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblHachusho.cs">
+      <DependentUpon>dtblHachusho.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblHachusho.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblHachusho.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblJuchuKanrenIchiran.cs">
+      <DependentUpon>dtblJuchuKanrenIchiran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblJuchuKanrenIchiran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblJuchuKanrenIchiran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblJyuhaccyuIchiran.cs">
+      <DependentUpon>dtblJyuhaccyuIchiran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblJyuhaccyuIchiran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblJyuhaccyuIchiran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Report\rptJyuchachuIchiran.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptJyuchachuIchiran.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Table\dtblKaikakeZandakaIchiran.cs">
+      <DependentUpon>dtblKaikakeZandakaIchiran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblKaikakeZandakaIchiran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblKaikakeZandakaIchiran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblKenbetuUriagNikkeihyo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblKenbetuUriagNikkeihyo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblKenmeiIchiran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblKenmeiIchiran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblKetuban.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblKetuban.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblMitumorisho.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblMitumorisho.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblNohinshoAsami.cs">
+      <DependentUpon>dtblNohinshoAsami.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblNohinshoAsami.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblNohinshoAsami.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblNohinshoNegurosu.cs">
+      <DependentUpon>dtblNohinshoNegurosu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblNohinshoNegurosu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblNohinshoNegurosu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblNohinshoToHokudenki.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblNohinshoToHokudenki.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblNohinshoYudensha.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblNohinshoYudensha.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblNohnshoKandenko.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblNohnshoKandenko.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblNouhinShireZanIchiran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblNouhinShireZanIchiran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblNouhinsyo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblNouhinsyo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblRyosyusyo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblRyosyusyo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblSeikyuIchiran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblSeikyuIchiran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblSeikyusyo.cs">
+      <DependentUpon>dtblSeikyusyo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblSeikyusyo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblSeikyusyo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblShiharaiYotei.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblShiharaiYotei.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblShireM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblShireM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblShohinIchiran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblShohinIchiran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblShukahyo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblShukahyo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblSireMotocho.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblSireMotocho.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblTokuiM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblTokuiM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblTokuisakibetuHibetuNyukinIchiran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblTokuisakibetuHibetuNyukinIchiran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblTokuisakibetuUriageMotocho.cs">
+      <DependentUpon>dtblTokuisakibetuUriageMotocho.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblTokuisakibetuUriageMotocho.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblTokuisakibetuUriageMotocho.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblTokuisakibetuUriageShukeihyo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblTokuisakibetuUriageShukeihyo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblTokuisakibetuUrikakeichiran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblTokuisakibetuUrikakeichiran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblTokuisakiMaster.cs">
+      <DependentUpon>dtblTokuisakiMaster.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblTokuisakiMaster.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblTokuisakiMaster.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblUriagesyusiichiran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblUriagesyusiichiran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblUrikakekinKaisyuhyo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblUrikakekinKaisyuhyo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\ViewForm\frmPrintView2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print\ViewForm\frmPrintView2.Designer.cs">
+      <DependentUpon>frmPrintView2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\ViewForm\frmPrintView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print\ViewForm\frmPrintView.Designer.cs">
+      <DependentUpon>frmPrintView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="88_Master\frmKaisya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="88_Master\frmKaisya.Designer.cs">
+      <DependentUpon>frmKaisya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="88_Master\frmKanriM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="88_Master\frmKanriM.Designer.cs">
+      <DependentUpon>frmKanriM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="88_Master\frmMeisyoM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="88_Master\frmMeisyoM.Designer.cs">
+      <DependentUpon>frmMeisyoM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="88_Master\frmShireM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="88_Master\frmShireM.Designer.cs">
+      <DependentUpon>frmShireM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="88_Master\frmSyohinM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="88_Master\frmSyohinM.Designer.cs">
+      <DependentUpon>frmSyohinM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="88_Master\frmTantoM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="88_Master\frmTantoM.Designer.cs">
+      <DependentUpon>frmTantoM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="88_Master\frmTokuiM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="88_Master\frmTokuiM.designer.cs">
+      <DependentUpon>frmTokuiM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="88_Master\sfrmTokuiMview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="88_Master\sfrmTokuiMview.Designer.cs">
+      <DependentUpon>sfrmTokuiMview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="99_Resorce\Consts.cs" />
+    <Compile Include="99_Resorce\Messages.cs" />
+    <Compile Include="00_Common\FeaturesButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="00_Common\FeaturesButton.Designer.cs">
+      <DependentUpon>FeaturesButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="00_Common\ItemHeadLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="00_Common\ItemHeadLabel.Designer.cs">
+      <DependentUpon>ItemHeadLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01_DB\DBCommon.cs" />
+    <Compile Include="07_NouhinSyo\frmAsamiDenkiNouhinsyoInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmAsamiDenkiNouhinsyoInput.Designer.cs">
+      <DependentUpon>frmAsamiDenkiNouhinsyoInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmKandenkouNouhinsyoInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmKandenkouNouhinsyoInput.Designer.cs">
+      <DependentUpon>frmKandenkouNouhinsyoInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="10_KaikakeIchiran\frmKaikakeIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="10_KaikakeIchiran\frmKaikakeIchiran.Designer.cs">
+      <DependentUpon>frmKaikakeIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmTokuisakiSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmTokuisakiSearch.Designer.cs">
+      <DependentUpon>sfrmTokuisakiSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmShiiresakiSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_SubForm\sfrmShiiresakiSearch.Designer.cs">
+      <DependentUpon>sfrmShiiresakiSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="09_Nyukin\frmNyukinInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="09_Nyukin\frmNyukinInput.Designer.cs">
+      <DependentUpon>frmNyukinInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="08_Shiharai\frmShiharaiInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="08_Shiharai\frmShiharaiInput.Designer.cs">
+      <DependentUpon>frmShiharaiInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmYudensyaNouhinsyoInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmYudensyaNouhinsyoInput.Designer.cs">
+      <DependentUpon>frmYudensyaNouhinsyoInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmTouhokuDenkiNouhinsyoInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmTouhokuDenkiNouhinsyoInput.Designer.cs">
+      <DependentUpon>frmTouhokuDenkiNouhinsyoInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmNihonDensetsuNouhinsyoInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmNihonDensetsuNouhinsyoInput.Designer.cs">
+      <DependentUpon>frmNihonDensetsuNouhinsyoInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmNegurosuNouhinsyoInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmNegurosuNouhinsyoInput.Designer.cs">
+      <DependentUpon>frmNegurosuNouhinsyoInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmJisyaNouhinsyoInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmJisyaNouhinsyoInput.Designer.cs">
+      <DependentUpon>frmJisyaNouhinsyoInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmNouhinsyoInputBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07_NouhinSyo\frmNouhinsyoInputBase.Designer.cs">
+      <DependentUpon>frmNouhinsyoInputBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="06_Shiire\frmShiireInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="06_Shiire\frmShiireInput.Designer.cs">
+      <DependentUpon>frmShiireInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04_Mitumori\frmMitumoriInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04_Mitumori\frmMitumoriInput.Designer.cs">
+      <DependentUpon>frmMitumoriInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="05_Juchu\frmJuchuInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="05_Juchu\frmJuchuInput.Designer.cs">
+      <DependentUpon>frmJuchuInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblMitumoriIchiran.cs">
+      <DependentUpon>dtblMitumoriIchiran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Table\dtblMitumoriIchiran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtblMitumoriIchiran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="00_Common\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="00_Common\ChildBaseForm.resx">
+      <DependentUpon>ChildBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="00_Common\frmPrintQueryNouhinsyo.resx">
+      <DependentUpon>frmPrintQueryNouhinsyo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="00_Common\frmPrintQuery.resx">
+      <DependentUpon>frmPrintQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="00_Common\frmMessage.resx">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_SubForm\sfrmUriageIchiran.resx">
+      <DependentUpon>sfrmUriageIchiran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_SubForm\sfrmHachuSearch.resx">
+      <DependentUpon>sfrmHachuSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_SubForm\sfrmShiharaiSearch.resx">
+      <DependentUpon>sfrmShiharaiSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_SubForm\sfrmNyukinSearch.resx">
+      <DependentUpon>sfrmNyukinSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_SubForm\sfrmShireSearch.resx">
+      <DependentUpon>sfrmShireSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_SubForm\sfrmNouhinsyoSearch.resx">
+      <DependentUpon>sfrmNouhinsyoSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_SubForm\sfrmJuchuSearch.resx">
+      <DependentUpon>sfrmJuchuSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_SubForm\sfrmMitumoriSearch.resx">
+      <DependentUpon>sfrmMitumoriSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_SubForm\sfrmKenmeiSearch.resx">
+      <DependentUpon>sfrmKenmeiSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_SubForm\sfrmShouhinSearch.resx">
+      <DependentUpon>sfrmShouhinSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Menu\frmBusinessMenuBase.resx">
+      <DependentUpon>frmBusinessMenuBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Menu\frmKihonMid.resx">
+      <DependentUpon>frmKihonMid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Menu\frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Menu\frmJuchuTop.resx">
+      <DependentUpon>frmJuchuTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Menu\frmKihonTop.resx">
+      <DependentUpon>frmKihonTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Menu\frmMitumoriTop.resx">
+      <DependentUpon>frmMitumoriTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Menu\frmSyoribiChange.resx">
+      <DependentUpon>frmSyoribiChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Menu\frmShiireNichijiMid.resx">
+      <DependentUpon>frmShiireNichijiMid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Menu\frmShiireGetsujiMid.resx">
+      <DependentUpon>frmShiireGetsujiMid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Menu\frmShiireNenjiMid.resx">
+      <DependentUpon>frmShiireNenjiMid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Menu\frmUriageZuijiMid.resx">
+      <DependentUpon>frmUriageZuijiMid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Menu\frmUriageShiireTop.resx">
+      <DependentUpon>frmUriageShiireTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Menu\frmUriageNenjiMid.resx">
+      <DependentUpon>frmUriageNenjiMid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Menu\frmUriageNichijiBtm.resx">
+      <DependentUpon>frmUriageNichijiBtm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Menu\frmUriageGetsujiMid.resx">
+      <DependentUpon>frmUriageGetsujiMid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Menu\frmShiireShimebiMid.resx">
+      <DependentUpon>frmShiireShimebiMid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Menu\frmUriageShimebiMid.resx">
+      <DependentUpon>frmUriageShimebiMid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Menu\frmUriageNichijiMid.resx">
+      <DependentUpon>frmUriageNichijiMid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_Mitumori\frmSelectSyaban.resx">
+      <DependentUpon>frmSelectSyaban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="05_Juchu\frmBikouInput.resx">
+      <DependentUpon>frmBikouInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="05_Juchu\frmSearchDiplaySelect.resx">
+      <DependentUpon>frmSearchDiplaySelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07_NouhinSyo\frmNouhinsyoInput.resx">
+      <DependentUpon>frmNouhinsyoInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07_NouhinSyo\frmSearchDiplaySelect.resx">
+      <DependentUpon>frmSearchDiplaySelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="11_UrikakeIchiran\frmUrikakeIchiran.resx">
+      <DependentUpon>frmUrikakeIchiran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmBupinHachusyo.resx">
+      <DependentUpon>frmBupinHachusyo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmNouhinShireZanIchiran.resx">
+      <DependentUpon>frmNouhinShireZanIchiran.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmKenbetsuHibetsuUriageSyukei.resx">
+      <DependentUpon>frmKenbetsuHibetsuUriageSyukei.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmKaikakeZandataIchiran.resx">
+      <DependentUpon>frmKaikakeZandataIchiran.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmKenmeiIchiran.resx">
+      <DependentUpon>frmKenmeiIchiran.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmJuchuKanrenIchiran.resx">
+      <DependentUpon>frmJuchuKanrenIchiran.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmAtena.resx">
+      <DependentUpon>frmAtena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmShiresakiIchiran.resx">
+      <DependentUpon>frmShiresakiIchiran.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmShouhinMIchiran.resx">
+      <DependentUpon>frmShouhinMIchiran.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmTokuiMIchiran.resx">
+      <DependentUpon>frmTokuiMIchiran.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmNyukinIchiran.resx">
+      <DependentUpon>frmNyukinIchiran.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmRyoShuSho.resx">
+      <DependentUpon>frmRyoShuSho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmOkurijou.resx">
+      <DependentUpon>frmOkurijou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmKetubanIchiran.resx">
+      <DependentUpon>frmKetubanIchiran.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmTokuisakiUrikakeIchiran.resx">
+      <DependentUpon>frmTokuisakiUrikakeIchiran.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmShiharaiYotei.resx">
+      <DependentUpon>frmShiharaiYotei.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmShireMototyo.resx">
+      <DependentUpon>frmShireMototyo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmUriageSyushiIchiran.resx">
+      <DependentUpon>frmUriageSyushiIchiran.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmTokuisakiUrikakeMototyo.resx">
+      <DependentUpon>frmTokuisakiUrikakeMototyo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmUrikakeKaisyuHyo.resx">
+      <DependentUpon>frmUrikakeKaisyuHyo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmSeikyusyo.resx">
+      <DependentUpon>frmSeikyusyo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmTokuisakiUriageSyukei.resx">
+      <DependentUpon>frmTokuisakiUriageSyukei.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmJyuchachuIchiran.resx">
+      <DependentUpon>frmJyuchachuIchiran.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmSeikyuIchiran.resx">
+      <DependentUpon>frmSeikyuIchiran.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmTokuisakiKikanSyuukei.resx">
+      <DependentUpon>frmTokuisakiKikanSyuukei.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07_NouhinSyo\frmAsamiDenkiNouhinsyoInput.resx">
+      <DependentUpon>frmAsamiDenkiNouhinsyoInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07_NouhinSyo\frmKandenkouNouhinsyoInput.resx">
+      <DependentUpon>frmKandenkouNouhinsyoInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="10_KaikakeIchiran\frmKaikakeIchiran.resx">
+      <DependentUpon>frmKaikakeIchiran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_SubForm\sfrmTokuisakiSearch.resx">
+      <DependentUpon>sfrmTokuisakiSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_SubForm\sfrmShiiresakiSearch.resx">
+      <DependentUpon>sfrmShiiresakiSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="09_Nyukin\frmNyukinInput.resx">
+      <DependentUpon>frmNyukinInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="08_Shiharai\frmShiharaiInput.resx">
+      <DependentUpon>frmShiharaiInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07_NouhinSyo\frmYudensyaNouhinsyoInput.resx">
+      <DependentUpon>frmYudensyaNouhinsyoInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07_NouhinSyo\frmTouhokuDenkiNouhinsyoInput.resx">
+      <DependentUpon>frmTouhokuDenkiNouhinsyoInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07_NouhinSyo\frmNihonDensetsuNouhinsyoInput.resx">
+      <DependentUpon>frmNihonDensetsuNouhinsyoInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07_NouhinSyo\frmNegurosuNouhinsyoInput.resx">
+      <DependentUpon>frmNegurosuNouhinsyoInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07_NouhinSyo\frmJisyaNouhinsyoInput.resx">
+      <DependentUpon>frmJisyaNouhinsyoInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07_NouhinSyo\frmNouhinsyoInputBase.resx">
+      <DependentUpon>frmNouhinsyoInputBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="06_Shiire\frmShiireInput.resx">
+      <DependentUpon>frmShiireInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_Mitumori\frmMitumoriInput.resx">
+      <DependentUpon>frmMitumoriInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="05_Juchu\frmJuchuInput.resx">
+      <DependentUpon>frmJuchuInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_PrintInstructions\frmMitumoriIchiran.resx">
+      <DependentUpon>frmMitumoriIchiran.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="13_SeikyuKoshin\frmSeikyuChangeSearch.resx">
+      <DependentUpon>frmSeikyuChangeSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="13_SeikyuKoshin\frmSeikyuChange.resx">
+      <DependentUpon>frmSeikyuChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="13_SeikyuKoshin\frmSeikyuShimebiKoshin.resx">
+      <DependentUpon>frmSeikyuShimebiKoshin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="13_SeikyuKoshin\frmSeikyuKoshinTop.resx">
+      <DependentUpon>frmSeikyuKoshinTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="14_ShiharaiKoushin\frmShiharaiShimebiKoshin.resx">
+      <DependentUpon>frmShiharaiShimebiKoshin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="18_TokuisakiUrikakeKanri\frmTokuisakiUrikakeKanri.resx">
+      <DependentUpon>frmTokuisakiUrikakeKanri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="15_TokuisakiSeikyuKanri\frmTokuisakiSeikyuKanri.resx">
+      <DependentUpon>frmTokuisakiSeikyuKanri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="16_Nakakita\frmNakakitaJigyousyobetuUriage.resx">
+      <DependentUpon>frmNakakitaJigyousyobetuUriage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="16_Nakakita\frmNakakitaTantousyabetuUriage.resx">
+      <DependentUpon>frmNakakitaTantousyabetuUriage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="16_Nakakita\frmNakakitaKenbetuUriage.resx">
+      <DependentUpon>frmNakakitaKenbetuUriage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="17_UriageHibetuSoukatu\frmUriageHibetuSoukatu.resx">
+      <DependentUpon>frmUriageHibetuSoukatu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="19_UriageIchiran\frmUriageIchiran.resx">
+      <DependentUpon>frmUriageIchiran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="88_Master\frmKenmeiM.resx">
+      <DependentUpon>frmKenmeiM.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptAtena3Gou.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAtena3Gou.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptAtena2Gou.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAtena2Gou.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptBuppinKounyusho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBuppinKounyusho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptHachushoAllMeisai.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptHachushoAllMeisai.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptHachusho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptHachusho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptNouhinShireZanIchiran.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNouhinShireZanIchiran.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptJyuchachuIchiran.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptJyuchachuIchiran.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptKaikakeZandakaIchiranNen.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptKaikakeZandakaIchiranNen.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptKaikakeZandakaIchiranTuki.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptKaikakeZandakaIchiranTuki.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptKenbetuUriageNikkeihyo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptKenbetuUriageNikkeihyo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptKenmeiIchiran.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptKenmeiIchiran.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptJuchuKanrenIchiran.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptJuchuKanrenIchiran.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptKetubanSeikyusyo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptKetubanSeikyusyo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptKetubanNouhinsyo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptKetubanNouhinsyo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptMitumoriIchiran.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMitumoriIchiran.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptMitumoriIchiran_.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMitumoriIchiran_.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptMitumorisho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMitumorisho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptNohinshoAsami.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNohinshoAsami.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptNohinshoKandenko.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNohinshoKandenko.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptNohinshoNegurosu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNohinshoNegurosu.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptNohinshoYudensha.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNohinshoYudensha.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptNouhinshoTohokudenki.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNouhinshoTohokudenki.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptNouhinsyo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNouhinsyo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptRyosyusyo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRyosyusyo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptSagawa.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSagawa.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptSeikyuIchiran.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSeikyuIchiran.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptSeikyusyo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSeikyusyo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptShiharaiYotei.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptShiharaiYotei.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptShireIchiran.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptShireIchiran.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptShohinIchiran.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptShohinIchiran.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptKetubanJuchu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptKetubanJuchu.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptSireMotocho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSireMotocho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptTokuimIchiran.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTokuimIchiran.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptTokuisakibetuHibetuNyukinIchiran.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTokuisakibetuHibetuNyukinIchiran.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptTokuisakibetuUriageShukeihyo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTokuisakibetuUriageShukeihyo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptTokuisakibetuUrikakeIchiran.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTokuisakibetuUrikakeIchiran.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptTokuisakiMaster.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTokuisakiMaster.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptTokuisakiUriageMotocyo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTokuisakiUriageMotocyo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptUriagesyusiichiran.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptUriagesyusiichiran.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptUrikakekinKaishuhyo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptUrikakekinKaishuhyo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report\rptYamato.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptYamato.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\ViewForm\frmPrintView2.resx">
+      <DependentUpon>frmPrintView2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\ViewForm\frmPrintView.resx">
+      <DependentUpon>frmPrintView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="88_Master\frmKaisya.resx">
+      <DependentUpon>frmKaisya.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="88_Master\frmKanriM.resx">
+      <DependentUpon>frmKanriM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="88_Master\frmMeisyoM.resx">
+      <DependentUpon>frmMeisyoM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="88_Master\frmShireM.resx">
+      <DependentUpon>frmShireM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="88_Master\frmSyohinM.resx">
+      <DependentUpon>frmSyohinM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="88_Master\frmTantoM.resx">
+      <DependentUpon>frmTantoM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="88_Master\frmTokuiM.resx">
+      <DependentUpon>frmTokuiM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="88_Master\sfrmTokuiMview.resx">
+      <DependentUpon>sfrmTokuiMview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Print\Table\dtblAtena.xsc">
+      <DependentUpon>dtblAtena.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblAtena.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblAtena.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Print\Table\dtblAtena.xss">
+      <DependentUpon>dtblAtena.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblBuppin.xsc">
+      <DependentUpon>dtblBuppin.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblBuppin.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblBuppin.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblBuppin.xss">
+      <DependentUpon>dtblBuppin.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblHachusho.xsc">
+      <DependentUpon>dtblHachusho.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblHachusho.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblHachusho.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblHachusho.xss">
+      <DependentUpon>dtblHachusho.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblJuchuKanrenIchiran.xsc">
+      <DependentUpon>dtblJuchuKanrenIchiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblJuchuKanrenIchiran.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblJuchuKanrenIchiran.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblJuchuKanrenIchiran.xss">
+      <DependentUpon>dtblJuchuKanrenIchiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblJyuhaccyuIchiran.xsc">
+      <DependentUpon>dtblJyuhaccyuIchiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblJyuhaccyuIchiran.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblJyuhaccyuIchiran.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblJyuhaccyuIchiran.xss">
+      <DependentUpon>dtblJyuhaccyuIchiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblKaikakeZandakaIchiran.xsc">
+      <DependentUpon>dtblKaikakeZandakaIchiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblKaikakeZandakaIchiran.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblKaikakeZandakaIchiran.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblKaikakeZandakaIchiran.xss">
+      <DependentUpon>dtblKaikakeZandakaIchiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblKenbetuUriagNikkeihyo.xsc">
+      <DependentUpon>dtblKenbetuUriagNikkeihyo.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblKenbetuUriagNikkeihyo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblKenbetuUriagNikkeihyo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblKenbetuUriagNikkeihyo.xss">
+      <DependentUpon>dtblKenbetuUriagNikkeihyo.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblKenmeiIchiran.xsc">
+      <DependentUpon>dtblKenmeiIchiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblKenmeiIchiran.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblKenmeiIchiran.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblKenmeiIchiran.xss">
+      <DependentUpon>dtblKenmeiIchiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblKetuban.xsc">
+      <DependentUpon>dtblKetuban.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblKetuban.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblKetuban.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Print\Table\dtblKetuban.xss">
+      <DependentUpon>dtblKetuban.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblMitumoriIchiran.xsc">
+      <DependentUpon>dtblMitumoriIchiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblMitumoriIchiran.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblMitumoriIchiran.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblMitumoriIchiran.xss">
+      <DependentUpon>dtblMitumoriIchiran.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Print\Table\dtblMitumorisho.xsc">
+      <DependentUpon>dtblMitumorisho.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblMitumorisho.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblMitumorisho.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblMitumorisho.xss">
+      <DependentUpon>dtblMitumorisho.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblNohinshoAsami.xsc">
+      <DependentUpon>dtblNohinshoAsami.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblNohinshoAsami.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblNohinshoAsami.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblNohinshoAsami.xss">
+      <DependentUpon>dtblNohinshoAsami.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblNohinshoNegurosu.xsc">
+      <DependentUpon>dtblNohinshoNegurosu.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblNohinshoNegurosu.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblNohinshoNegurosu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblNohinshoNegurosu.xss">
+      <DependentUpon>dtblNohinshoNegurosu.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblNohinshoToHokudenki.xsc">
+      <DependentUpon>dtblNohinshoToHokudenki.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblNohinshoToHokudenki.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblNohinshoToHokudenki.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblNohinshoToHokudenki.xss">
+      <DependentUpon>dtblNohinshoToHokudenki.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblNohinshoYudensha.xsc">
+      <DependentUpon>dtblNohinshoYudensha.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblNohinshoYudensha.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblNohinshoYudensha.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblNohinshoYudensha.xss">
+      <DependentUpon>dtblNohinshoYudensha.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblNohnshoKandenko.xsc">
+      <DependentUpon>dtblNohnshoKandenko.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblNohnshoKandenko.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblNohnshoKandenko.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblNohnshoKandenko.xss">
+      <DependentUpon>dtblNohnshoKandenko.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblNouhinShireZanIchiran.xsc">
+      <DependentUpon>dtblNouhinShireZanIchiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblNouhinShireZanIchiran.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblNouhinShireZanIchiran.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Print\Table\dtblNouhinShireZanIchiran.xss">
+      <DependentUpon>dtblNouhinShireZanIchiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblNouhinsyo.xsc">
+      <DependentUpon>dtblNouhinsyo.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblNouhinsyo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblNouhinsyo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblNouhinsyo.xss">
+      <DependentUpon>dtblNouhinsyo.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblRyosyusyo.xsc">
+      <DependentUpon>dtblRyosyusyo.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblRyosyusyo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblRyosyusyo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblRyosyusyo.xss">
+      <DependentUpon>dtblRyosyusyo.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblSeikyuIchiran.xsc">
+      <DependentUpon>dtblSeikyuIchiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblSeikyuIchiran.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblSeikyuIchiran.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblSeikyuIchiran.xss">
+      <DependentUpon>dtblSeikyuIchiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblSeikyusyo.xsc">
+      <DependentUpon>dtblSeikyusyo.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblSeikyusyo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblSeikyusyo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblSeikyusyo.xss">
+      <DependentUpon>dtblSeikyusyo.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblShiharaiYotei.xsc">
+      <DependentUpon>dtblShiharaiYotei.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblShiharaiYotei.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblShiharaiYotei.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblShiharaiYotei.xss">
+      <DependentUpon>dtblShiharaiYotei.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblShireM.xsc">
+      <DependentUpon>dtblShireM.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblShireM.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblShireM.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblShireM.xss">
+      <DependentUpon>dtblShireM.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblShohinIchiran.xsc">
+      <DependentUpon>dtblShohinIchiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblShohinIchiran.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblShohinIchiran.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblShohinIchiran.xss">
+      <DependentUpon>dtblShohinIchiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblShukahyo.xsc">
+      <DependentUpon>dtblShukahyo.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblShukahyo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblShukahyo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblShukahyo.xss">
+      <DependentUpon>dtblShukahyo.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblSireMotocho.xsc">
+      <DependentUpon>dtblSireMotocho.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblSireMotocho.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblSireMotocho.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblSireMotocho.xss">
+      <DependentUpon>dtblSireMotocho.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblTokuiM.xsc">
+      <DependentUpon>dtblTokuiM.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblTokuiM.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblTokuiM.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblTokuiM.xss">
+      <DependentUpon>dtblTokuiM.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblTokuisakibetuHibetuNyukinIchiran.xsc">
+      <DependentUpon>dtblTokuisakibetuHibetuNyukinIchiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblTokuisakibetuHibetuNyukinIchiran.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblTokuisakibetuHibetuNyukinIchiran.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblTokuisakibetuHibetuNyukinIchiran.xss">
+      <DependentUpon>dtblTokuisakibetuHibetuNyukinIchiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblTokuisakibetuUriageMotocho.xsc">
+      <DependentUpon>dtblTokuisakibetuUriageMotocho.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblTokuisakibetuUriageMotocho.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblTokuisakibetuUriageMotocho.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblTokuisakibetuUriageMotocho.xss">
+      <DependentUpon>dtblTokuisakibetuUriageMotocho.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblTokuisakibetuUriageShukeihyo.xsc">
+      <DependentUpon>dtblTokuisakibetuUriageShukeihyo.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblTokuisakibetuUriageShukeihyo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblTokuisakibetuUriageShukeihyo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblTokuisakibetuUriageShukeihyo.xss">
+      <DependentUpon>dtblTokuisakibetuUriageShukeihyo.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblTokuisakibetuUrikakeichiran.xsc">
+      <DependentUpon>dtblTokuisakibetuUrikakeichiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblTokuisakibetuUrikakeichiran.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblTokuisakibetuUrikakeichiran.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblTokuisakibetuUrikakeichiran.xss">
+      <DependentUpon>dtblTokuisakibetuUrikakeichiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblTokuisakiMaster.xsc">
+      <DependentUpon>dtblTokuisakiMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblTokuisakiMaster.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblTokuisakiMaster.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Print\Table\dtblTokuisakiMaster.xss">
+      <DependentUpon>dtblTokuisakiMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblUriagesyusiichiran.xsc">
+      <DependentUpon>dtblUriagesyusiichiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblUriagesyusiichiran.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblUriagesyusiichiran.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblUriagesyusiichiran.xss">
+      <DependentUpon>dtblUriagesyusiichiran.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblUrikakekinKaisyuhyo.xsc">
+      <DependentUpon>dtblUrikakekinKaisyuhyo.xsd</DependentUpon>
+    </None>
+    <None Include="Print\Table\dtblUrikakekinKaisyuhyo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtblUrikakekinKaisyuhyo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Table\dtblUrikakekinKaisyuhyo.xss">
+      <DependentUpon>dtblUrikakekinKaisyuhyo.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="99_Resorce\companyStamp.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
